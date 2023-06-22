@@ -1,54 +1,58 @@
-## [Solidity Foundry Course](https://www.youtube.com/watch?v=umepbfKp5rI)
+# Solidity Foundry Course
 
+This repository serves as the documentation and codebase for the Solidity Foundry Course, taught by Patrick. The course focuses on learning the basics of Solidity, a programming language used for writing smart contracts on the Ethereum blockchain.
 
-### DAY 1
+## Day 1
 
-    __**Basics**__ : Completed it in the 32 hours long solidity course. Ofc from Patrick.
+### Basics
 
+I completed the 32-hour long Solidity course, covering the fundamentals of Solidity development.
 
-    __**Learnt Today**__ : 
-    1) Usage if remix ide
-    2) Basic Solidity Syntax: (pragma)
-        ` pragma solidity 0.8.20; `
-        The above syntax is use to tell the solidity version features used in the files and also the compiler using it.
-    3) contract keywords : 
-        ``` contract ContractName {
+### What I Learned Today
 
-            }
-        ```
-        It is used to create a contract.
-    4) Datatypes in solidity:
-        **Simple:**
-        uint -> store unsigned interger which means only positive numbers.
-             -> is available in variable sizes -> uint8, uint16, uint64, ... uint256. uint <=> uint256.
-        int  -> store signed integer meaning can store negative as well as positive.
-             -> similar sizes as mentioned for uint.
-        bool -> it is used to store true or false.
-        string -> used to store collection of character i.e. a string.
-        bytes32 -> internally string are stored as bytes32.
-        address -> used to store address in a variable.(For EVM Address -> 0xc1587bf051a81a199ec46cab7418487b765dd3e6)
+1. Usage of Remix IDE: I explored the Remix IDE, which is a web-based development environment for writing, testing, and deploying Solidity smart contracts.
 
-        **Complex Datatypes:**
-        Array: Its contiguous alloction of data. Can be fixed-sized as well as dynamic size.
-               Dynamic - `uint[] public arr;`
-               Static  - `uint[3] public arr`
+2. Basic Solidity Syntax: I learned about the `pragma` statement in Solidity, which is used to specify the compiler version and features used in the contract. For example:
 
-        Struct: It is used to create user defined data types 
+   ```solidity
+   pragma solidity 0.8.20;
+   ```
 
-        ``` struct Person {
-                int name;
-                uint age;
-            }   
-        ```
-    5) Functions in Solidity and bit about gas
-        Function can either be used to write data to the blockchain or read data from the chain
-        And and also any change made to the blockchain a transaction is sent and gas is used.
-        And to read the data from the blockchain through the function the function must be of type view.
-        Actually there are 2 props(dont know what to call them) 
-        1) view - the function with this can be used to read data from the blockchain.
-        2) pure - neither can be read nor is writable.
+   This statement ensures that the contract is compiled using Solidity version 0.8.20.
 
-        
+3. Contract Keywords: I discovered the usage of the `contract` keyword, which is used to create a contract in Solidity. Here's an example:
 
-                         
-    
+   ```solidity
+   contract ContractName {
+       // Contract code goes here
+   }
+   ```
+
+4. Solidity Data Types: I gained an understanding of the different data types available in Solidity:
+
+   - Simple Data Types:
+     - `uint`: Used to store unsigned integers (positive numbers). It has various variable sizes such as `uint8`, `uint16`, `uint64`, up to `uint256`, with `uint` being synonymous with `uint256`.
+     - `int`: Used to store signed integers (both positive and negative). Similar variable sizes as `uint` are available.
+     - `bool`: Used to store boolean values (`true` or `false`).
+     - `string`: Used to store a collection of characters (i.e., a string).
+     - `bytes32`: Used to store strings internally as 32-byte values.
+     - `address`: Used to store Ethereum addresses (e.g., `0xc1587bf051a81a199ec46cab7418487b765dd3e6`).
+
+   - Complex Data Types:
+     - Array: A contiguous allocation of data that can be either fixed-sized or dynamic-sized. Examples:
+       - Dynamic Array: `uint[] public arr;`
+       - Static Array: `uint[3] public arr;`
+     - Struct: Used to define user-defined data types. Example:
+
+       ```solidity
+       struct Person {
+           int name;
+           uint age;
+       }
+       ```
+
+5. Functions in Solidity and Gas: I learned about functions in Solidity, which can either be used to read data from the blockchain or write data to it. When making changes to the blockchain, a transaction is sent and gas is consumed. Functions that read data are marked as `view`, while functions that neither read nor write are marked as `pure`.
+
+These are the concepts covered in the first day of the Solidity Foundry Course. Please refer to the [YouTube video](https://www.youtube.com/watch?v=umepbfKp5rI) for more detailed explanations and examples.
+
+**Note**: This README file is a sample representation of the information provided and does not include the actual content of the course.
